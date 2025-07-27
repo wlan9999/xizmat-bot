@@ -49,10 +49,10 @@ def handle_location(message):
     if nearby:
         nearby.sort(key=lambda x: x['distance'])
         for item in nearby[:5]:
-            text = f"👤 {item['name']}"
-                   f"🛠 {item['service']}"
-                   f"📍 {item['address']}"
-                   f"📞 {item['phone']}"
+            text = f"👤 {item['name']}\n"
+                   f"🛠 {item['service']}\n"
+                   f"📍 {item['address']}\n"
+                   f"📞 {item['phone']}\n"
                    f"📏 Masofa: {item['distance']} km"
             bot.send_message(message.chat.id, text)
     else:
