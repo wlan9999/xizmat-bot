@@ -4,7 +4,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 from math import radians, cos, sin, asin, sqrt
 
 # BOT TOKEN
-BOT_TOKEN = "8474774466:AAHW0lN0yl022NvXeamgEV4TLrAu4fbyYkc"
+BOT_TOKEN = "PASTE_YOUR_TOKEN_HERE"
 bot = telebot.TeleBot(BOT_TOKEN)
 
 # GOOGLE SHEETS SETUP
@@ -49,11 +49,17 @@ def handle_location(message):
     if nearby:
         nearby.sort(key=lambda x: x['distance'])
         for item in nearby[:5]:
-            text = f"👤 {item['name']}\n"
-                   f"🛠 {item['service']}\n"
-                   f"📍 {item['address']}\n"
-                   f"📞 {item['phone']}\n"
-                   f"📏 Masofa: {item['distance']} km"
+            text = (
+                f"👤 {item['name']}
+"
+                f"🛠 {item['service']}
+"
+                f"📍 {item['address']}
+"
+                f"📞 {item['phone']}
+"
+                f"📏 Masofa: {item['distance']} km"
+            )
             bot.send_message(message.chat.id, text)
     else:
         bot.send_message(message.chat.id, "Afsuski, 10 km radiusda xizmat topilmadi.")
