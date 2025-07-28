@@ -4,7 +4,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 from math import radians, cos, sin, asin, sqrt
 
 # BOT TOKEN
-BOT_TOKEN = "PASTE_YOUR_TOKEN_HERE"
+BOT_TOKEN = "8474774466:AAHW0lN0yl022NvXeamgEV4TLrAu4fbyYkc"
 bot = telebot.TeleBot(BOT_TOKEN)
 
 # GOOGLE SHEETS SETUP
